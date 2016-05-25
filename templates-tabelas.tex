@@ -1,3 +1,22 @@
+\begin{figure}
+\begin{tikzpicture} \begin{axis}[
+    ybar, x=1cm,
+    enlargelimits=0.05,
+    legend style={at={(0.5,-0.2)},
+    anchor=north,legend columns=-1},
+    ylabel={Percentual de Acertos (\%)},
+    symbolic x coords={prism,J48Graft,J48,%
+     Bagging,IBk, NBTree, LBR, FT, Simple Cart, BFTree, Multilayer Perceptron},
+     xtick=data,
+     nodes near coords, nodes near coords align={vertical},
+    x tick label style={rotate=60,anchor=east}, ]
+\addplot coordinates {(prism,89.74) (J48Graft,92.22) (J48,92.22) (Bagging,91.73) (IBk,93.05) (NBTree,94.43) (LBR, 94.03)
+    (FT, 95.25) (Simple Cart, 97.37) (BFTree, 96.81) (Multilayer Perceptron, 99.41) };
+\end{axis}
+\end{tikzpicture}
+\caption{Ranking do percentual de acerto dos algoritmos}
+\label{figure:ranking}
+\end{figure}
 
 \begin{table}[h]
   \begin{center}
