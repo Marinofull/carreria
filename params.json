@@ -1,0 +1,6 @@
+{
+  "name": "Segundo trabalho da disciplina Inteligência Artificial",
+  "tagline": "Aprendizado de Máquina",
+  "body": "Arquivos usados nos experimentos e construção do papper:\r\n\r\n- [artigo.tex](docs/artigo.tex)\r\n- [dataset.arff](docs/dataset.arff)\r\n- [Resultados entre os algoritmos](docs/result)\r\n\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
