@@ -10,10 +10,11 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{pgfplots}
+\usepackage{url}
 
 \sloppy
 
-\title{Instructions for Authors of SBC Conferences\\ Papers and Abstracts}
+\title{Análise Comparativa entre Algoritmos de Aprendizado de Máquina sob a Ferramenta Weka}
 
 \author{Marino Souza dos Santos\inst{1} }
 
@@ -28,42 +29,29 @@
 
 \maketitle
 
-\begin{abstract}
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-\end{abstract}
+%\begin{abstract}
+%  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+%  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+%  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+%  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+%  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+%  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+%\end{abstract}
 
 \begin{resumo}
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Este trabalho aprensenta uma análise de desempenho entre algoritmos de Aprendizado de Máquina, de diferentes paradígmas, sobre uma base de diagnósticos de pacientes submetidos à exames de câncer de mama registrados por \cite{creator:91}. Os algoritmos e métodos usados nos experimentos fora executados pela ferramenta Weka.
 \end{resumo}
 
 
-\section{General Information}
+\section{Introdução}
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Nos dias atuais o uso da informática para otimizar processos e tornar dados mais acessíveis é bastante comum, e em prontuários médicos estes dados, que já são digitais, podem se tornar aliados na investigação e otimização de detecção de doenças. Este trabalho faz uso de uma base de diagnósticos de exames oncológicos, mais precisamente de pacientes sob suspeita de câncer de mama. Vale resaltar que estes dados ja foram usados em outros experimentos, citados na sessão \ref{sec:thanks}, contudo os experimentos reaizados neste trabalho são não para confrontá-los, nem apoiá-los, a finalidade dos experimentos conduzidos aqui são apenas para comparar alguns algoritmos de Aprendizado de Máquina da ferramenta \cite{weka:09}.
 
-\section{First Page} \label{sec:firstpage}
+O uso de algoritmos de Aprendizado de Máquina neste contexto auxilia agiliza o processo diagnosticação de doenças. Os algoritmos ainda não são perfeitos, e podem dar falsos negativos, como veremos a seguir, mas reduz o esforço do profissinal resposável pelos diagnósticos consideravelmente.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum \cite{creator:91}.
+\section{Pré-processamento} \label{sec:prepro}
+
+Esta etapa não foi trabalhosa, pois os dados disponibilizados por \cite{donator:92} estavam num modelo muito semelhante ao usado pela ferramenta \emph{Weka}, foi somente necessário remover os atributos que informavam números de identificação dos pacientes, pois não contribuiam para o resultado. Dentre as 699 instâncias, apenas 16 continha dados incompletos, que foram devidamente reportados na tabela de \emph{tokens} da \emph{Weka}.
 
 \begin{table}[h]
   \begin{center}
@@ -101,60 +89,88 @@ O domínio do \textit{Breast Cancer Winscosin dataset} disponibilizado por \cite{
   \label{table:disposicao-atributos}
 \end{table}
 
-Probabilístico: NaiveBayesSimple
-Conexionista: RBFNetwork
-Simbólico: LADTree
-LAZY Extra: LBR
+\section{Extração de Padrões}
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum \cite{donator:92}.
-
-\section{Proceedings}
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-\section{Sections and Paragraphs}
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-\subsection{Subsections}
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Nesta etapa, o método \emph{Cross-Validation 10-fold} foi usado a fim de validar cada algoritmo testado. O método consiste em particionar o dataset em 10 partes onde o treinamento é feito em cima de 9 partições e os testes na partição restante. A ferramenta permite que o usuário informe a quantidade de folds, e para o caso de 10, ela executa 10 vezes fazendo diferentes permitações de partição destinada para teste contra as partições de treinamento.
 
 
-\section{Figures and Captions}\label{sec:figs}
+\begin{table}{H}
+  \begin{center}
+    \begin{tabular}{ l | l }
+      \hline
+      \multicolumn{2}{c}{ \bfseries Algoritmos de Classificação} \\ \hline
+      \bfseries Método & \bfseries Tipo \\ \hline
+      NaiveBayesSimple & Probabilístico\\
+      RBFNetwork & Conexionista\\
+      LADTree & Simbólico\\
+      LBR & Lazy (extra) \\
+      NaiveBayes & Probabilístico\\
+      NaiveBayesUpdateable & Probabilístico\\
+      SimpleLogistic & Conexionista\\
+      J48 & Simbólico\\
+      IBK & Lazy \\
+      MultilayerPerceptron& Conexionista\\
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{Os 10 algoritmos dispostos foram testados e os 4 primeiros foram os selecionados.}
+  \label{table:algoritmos}
+\end{table}
+
+Dentre os algoritmos dispostos em \ref{table:algoritmos} Foi escolhido o NaiveBayesSimple pois teve o mesmo desempenho que os
+outros probabilísticos, porém nenhum aluno ainda havia escolhido.
+Entre os Conexionistas o MultilayerPerceptron teve que ser abortado após levar mais de 60 segundos executando, o RBFNetwork
+ainda não estava no conjunto de algoritmos de ninguém além de ter tido o melhor resultado entre os do seu paradígma na questão
+de precisão, com a marca de apenas 20 erros, pois o tempo para ele, o SimpleLogistic (33 erros) e o SMO (29 erros) foram o
+mesmo, zero segundos. Para os algoritmos do paradígma simbólico foram testados o J48, que foi bem usado pela turma, porém o
+LADTreeteve melhor desempenho em precisão com apenas 36 falsos positivos contra 39 do seu concorrente, entretanto, no quesito
+tempo, demorou 2,4 segundos contra um tempo muito próximo de zero. Entre os algoritmos extra foram escolhidos do paradígma
+chamando de LAZY pela ferramenta, LBR com 19 erros contra IBK com 39 erros.
+
+\section{Pós-processamento}
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{ l | l  l  l}
+      \hline
+      \multicolumn{3}{c}{\bfseries Comparações entre os 4 algoritmos escolhidos } \\ \hline
+      Algoritmo & Percentual de acerto \\ \hline
+       (1) NaiveBayesSimple & 97.2818\\
+       (2) RBFNetwork & 97.1388 \\
+       (3) LADTree & 94.8498 \\
+       (4) LBR & 97.2818 \\ \hline
+    \end{tabular}
+  \end{center}
+  \caption{Percentual de acerto dos algoritmos escolhidos}
+\label{table:results}
+\end{table}
+
+A tabela \ref{table:results} mostra o percentual de acerto dos algoritmos escolhidos, onde o NaiveBayesSimple e o LBR ficam empatados com os melhores resultados. Os dados completos podem ser acessados em \cite{marinosrc:16}.
+
+%\subsection{Utilização do Conhecimento}
 
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-\section{References}
+\section{Agradecimentos} \label{sec:thanks}
 
-Bibliographic references must be unambiguous and uniform.  We recommend giving
-the author names references in brackets, e.g. \cite{weka:09}.
+Na base de dados é pedido explicitamente que citem os seguintes colaboradores:
+
+\emph{O. L. Mangasarian and W. H. Wolberg: "Cancer diagnosis via linear
+programming", SIAM News, Volume 23, Number 5, September 1990, pp 1 and 18.}\cite{creator:91}
+
+\emph{William H. Wolberg and O.L. Mangasarian: "Multisurface method of
+pattern separation for medical diagnosis applied to breast cytology",
+Proceedings of the National Academy of Sciences, U.S.A., Volume 87,
+December 1990, pp 9193-9196.}
+
+\emph{O. L. Mangasarian, R. Setiono, and W.H. Wolberg: "Pattern recognition
+via linear programming: Theory and application to medical diagnosis",
+in: "Large-scale numerical optimization", Thomas F. Coleman and Yuying
+Li, editors, SIAM Publications, Philadelphia 1990, pp 22-30.}
+
+\emph{K. P. Bennett and O. L. Mangasarian: "Robust linear programming
+discrimination of two linearly inseparable sets", Optimization Methods
+and Software 1, 1992, 23-34 (Gordon and Breach Science Publishers).}
 
 \bibliographystyle{sbc}
 \bibliography{sbc-template}

@@ -3,6 +3,10 @@ Conexionista: MultilayerPerceptron(abortado) SimpleLogistic(33) RBFNetwork(20) S
 Simbólico: J48 (39) ou LADTree (36) demora mais so que eh melhor e nao foi usado
 LAZY Extra: LBR (19) IBK(31) e ja usado
 
+NaiveBayesSimple
+RBFNetwork
+LADTree
+LBR
 
 Probabilístico: NaiveBayesSimple NaiveBayes e NaiveBayesUpdateable ficam no mesmo (19)
 
